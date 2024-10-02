@@ -15,14 +15,16 @@ function App() {
   const location = useLocation() ; 
   return (
     <>
-      <Navbar />
-      <Routes location = {location} key= {location.pathname}>
-          <Route index element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Test />} />
-          <Route path = "/models" element={<ModelViewer />} />
-          <Route path = "/test" element = {<Test />} />
+      {/* Conditionally render Navbar */}
+      {location.pathname !== '/about' && <Navbar />}
+
+      <Routes location={location} key={location.pathname}>
+        <Route index element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Test />} />
+        <Route path="/models" element={<ModelViewer />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
     </>
   );

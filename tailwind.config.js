@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         whitesmoke: '#f5f5f5',
+        customGray: '#e6e6e6',
       },
     },
   },
