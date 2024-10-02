@@ -19,8 +19,8 @@ function App() {
       <Routes location = {location} key= {location.pathname}>
           <Route index element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/about-us" element={<About />} />
-          <Route path="/projects" element={<About />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Test />} />
           <Route path = "/models" element={<ModelViewer />} />
           <Route path = "/test" element = {<Test />} />
       </Routes>
