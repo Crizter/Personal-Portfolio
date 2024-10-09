@@ -7,7 +7,7 @@ import Contact from './components/Contact'
 import Navbar from './components/Navbar'
 import ModelViewer from './components/ModelViewer'
 import Test from './components/Test'
-
+import Projects from './components/Projects'
 
 
 function App() {
@@ -16,13 +16,13 @@ function App() {
   return (
     <>
       {/* Conditionally render Navbar */}
-      {location.pathname !== '/about' && <Navbar />}
-
+      {location.pathname !== '/about'  && <Navbar />}
+      
       <Routes location={location} key={location.pathname}>
         <Route index element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Test />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/models" element={<ModelViewer />} />
         <Route path="/test" element={<Test />} />
       </Routes>
