@@ -37,7 +37,7 @@ const Projects = () => {
     const swipePower = (offset, velocity) => Math.abs(offset) * velocity;
 
     return (
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex justify-center items-center h-screen max-sm">
             <div className="relative w-4/5 h-3/5">
                 <motion.div
                     key={currentIndex}
@@ -60,7 +60,7 @@ const Projects = () => {
                             setCurrentIndex((prevIndex) => (prevIndex - 1 + imagesArr.length) % imagesArr.length);
                         }
                     }}
-                    className="absolute w-full h-full flex justify-center items-center"
+                    className="absolute w-full h-full flex justify-center items-center max-sm:h-1/2 max-sm:w-full"
                 >
                     <img
                         src={imagesArr[currentIndex]}
@@ -69,7 +69,7 @@ const Projects = () => {
                     />
                 </motion.div>
             </div>
-            <div className="absolute bottom-8 flex justify-center w-full">
+            <div className="absolute bottom-8 flex justify-center w-full max-sm:bottom-20 ">
                 {imagesArr.map((_, index) => (
                     <div
                         key={index}

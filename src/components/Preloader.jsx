@@ -19,6 +19,8 @@ const Preloader = () => {
         <div className="circle"></div>
         <div className="circle"></div>
         <p>Welcome to my personal portfolio</p>
+        <p>Harsh Sharma</p>
+        <p>Open in full screen</p>
       </div>
     </div>
   );

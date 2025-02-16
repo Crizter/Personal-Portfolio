@@ -56,99 +56,8 @@ function Contact() {
       </motion.div>
 
       <div className="flex justify-between">
-        <div>
-          {/* Contact Form */}
-          <motion.form
-            onSubmit={handleSubmit(onSubmit)}
-            className="space-y-6 p-2 m-3"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            {/* Name Input */}
-            <div>
-              <label className="block text-lg mb-2">Name</label>
-              <motion.input
-                type="text"
-                className="w-fit p-3 rounded-md bg-gray-800 text-white border-none outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Enter your name"
-                {...register("name", {
-                  required: "Name is required",
-                  minLength: {
-                    value: 2,
-                    message: "Name must be at least 2 characters",
-                  },
-                })}
-                whileFocus={{ scale: 1.05 }}
-              />
-              {errors.name && (
-                <p className="text-red-500">{errors.name.message}</p>
-              )}
-            </div>
-
-            {/* Email Input */}
-            <div>
-              <label className="block text-lg mb-2">Email</label>
-              <motion.input
-                type="email"
-                className="w-fit p-3 rounded-md bg-gray-800 text-white border-none outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Enter your email"
-                {...register("email", {
-                  required: "Email is required",
-                  pattern: {
-                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: "Invalid email address",
-                  },
-                })}
-                whileFocus={{ scale: 1.05 }}
-              />
-              {errors.email && (
-                <p className="text-red-500">{errors.email.message}</p>
-              )}
-            </div>
-
-            {/* Description Input */}
-            <div>
-              <label className="block text-lg mb-2">Message</label>
-              <motion.textarea
-                className="w-fit p-3 rounded-md bg-gray-800 text-white border-none outline-none focus:ring-2 focus:ring-blue-500"
-                rows="4"
-                placeholder="Enter your message"
-                {...register("description", {
-                  required: "Message is required",
-                  minLength: {
-                    value: 10,
-                    message: "Message must be at least 10 characters long",
-                  },
-                })}
-                whileFocus={{ scale: 1.05 }}
-              />
-              {errors.description && (
-                <p className="text-red-500">{errors.description.message}</p>
-              )}
-            </div>
-
-            {/* Submit Button */}
-            <motion.button
-              type="submit"
-              className="w-fit p-3 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:ring-2 focus:ring-indigo-500"
-              whileHover={{ scale: 1.05 }}
-            >
-              Submit
-            </motion.button>
-          </motion.form>
-
-          {/* Direct Email Link */}
-          <motion.div className="p-2 m-2" variants={textVariants}>
-            <a
-              href="mailto:harshsharma90866@gmail.com"
-              className="text-blue-500 hover:underline"
-            >
-              Send me email directly
-            </a>
-          </motion.div>
-        </div>
-
+       
+                
         {/* Right Section */}
         <motion.div initial="hidden" animate="visible" variants={containerVariants}>
           <div className="flex flex-col p-2 mt-8">
@@ -181,3 +90,5 @@ function Contact() {
 }
 
 export default Contact;
+
+
