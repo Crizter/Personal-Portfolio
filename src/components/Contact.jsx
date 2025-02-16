@@ -9,6 +9,8 @@ function Contact() {
   const [name, setName] = useState(""); 
   const [email, setEmail] = useState(""); 
   const [description, setDescription] = useState(""); 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [stateMessage, setStateMessage] = useState(null);
 
   // React Hook Form functions
   const { handleSubmit, register, formState: { errors } } = useForm();
